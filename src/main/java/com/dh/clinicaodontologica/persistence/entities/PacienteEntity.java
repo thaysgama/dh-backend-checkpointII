@@ -21,7 +21,7 @@ public class PacienteEntity {
     private Integer id;
 
     @Column(name = "rg")
-    private Integer rg;
+    private String rg;
 
     @Column(name = "nome")
     private String nome;
