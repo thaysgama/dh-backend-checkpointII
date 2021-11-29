@@ -25,7 +25,7 @@ public class DentistaController {
     }
 
     @GetMapping("/buscar/todos")
-    public ResponseEntity<List<DentistaDTO>> buscarTodos(){
+    public ResponseEntity<List<DentistaDTO>> buscarTodosDentistas(){
         log.info("Listando todos os dentistas.");
         List<DentistaDTO> listaDentistas = dentistaService.buscarTodos();
         return ResponseEntity.ok(listaDentistas);

@@ -21,11 +21,12 @@ public class ConsultaController {
 
     @PostMapping("/salvar")
     public ResponseEntity<ConsultaDTO> salvarConsulta(@RequestBody ConsultaDTO consultaDTO){
+        log.info("Registrando uma nova consulta.");
         return ResponseEntity.ok(consultaService.salvar(consultaDTO));
     }
 
     @GetMapping("/buscar/todos")
-    public ResponseEntity<List<ConsultaDTO>> buscarTodos(){
+    public ResponseEntity<List<ConsultaDTO>> buscarTodasConsultas(){
         log.info("Listando todas as consultas.");
         List<ConsultaDTO> listaConsultas = consultaService.buscarTodos();
         return ResponseEntity.ok(listaConsultas);
